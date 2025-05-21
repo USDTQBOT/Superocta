@@ -146,4 +146,3 @@ export default () => (
     <Redirect to={Routes.NotFound.path} />
   </Switch>
 );
-
