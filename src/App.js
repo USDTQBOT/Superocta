@@ -10,6 +10,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 
+// Admin Pages
+import AdminDashboard from './pages/admin/Dashboard';
+import AdminUsers from './pages/admin/Users';
+import AdminTransactions from './pages/admin/Transactions';
+
+// User Pages
+import UserDashboard from './pages/user/Dashboard';
+import UserTransfer from './pages/user/Transfer';
+import UserHistory from './pages/user/History';
+
 function App() {
   return (
     <AuthProvider>
@@ -27,7 +37,6 @@ function App() {
             <Route index element={<AdminDashboard />} />
             <Route path="users" element={<AdminUsers />} />
             <Route path="transactions" element={<AdminTransactions />} />
-            <Route path="settings" element={<AdminSettings />} />
           </Route>
           
           {/* User Routes */}
@@ -37,7 +46,6 @@ function App() {
             </AuthRoute>
           }>
             <Route index element={<UserDashboard />} />
-            <Route path="profile" element={<UserProfile />} />
             <Route path="transfer" element={<UserTransfer />} />
             <Route path="history" element={<UserHistory />} />
           </Route>
