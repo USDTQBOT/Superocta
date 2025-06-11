@@ -1,108 +1,40 @@
-/* Base Styles */
+:root {
+  --primary-color: #3a7bd5;
+  --secondary-color: #00d2ff;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
 }
 
-/* Layout Styles */
-.user-layout, .admin-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  padding: 20px;
-  margin-top: 60px;
-  flex: 1;
-}
-
-/* Card Styles */
-.card {
-  border: none;
+.auth-form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
 }
 
 .stat-card {
   padding: 20px;
   border-radius: 10px;
   color: white;
+  margin-bottom: 20px;
 }
 
-.stat-card.balance-card {
-  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+.balance-card {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
-.action-card {
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.action-card:hover {
-  transform: translateY(-5px);
-}
-
-.action-card.transfer {
-  background-color: #f8f9fa;
-  border: 1px solid #3a7bd5;
-}
-
-.action-card.request {
-  background-color: #f8f9fa;
-  border: 1px solid #28a745;
-}
-
-.action-card.history {
-  background-color: #f8f9fa;
-  border: 1px solid #6c757d;
-}
-
-/* User Avatar */
 .user-avatar {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* Activity List */
-.activity-list {
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.activity-item {
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.activity-item:last-child {
-  border-bottom: none;
-}
-
-.amount {
-  font-weight: bold;
-}
-
-/* Form Styles */
-.transfer-page {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Table Styles */
-.table-responsive {
-  overflow-x: auto;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .main-content {
-    margin-top: 50px;
-    padding: 10px;
-  }
-  
-  .stat-card {
-    margin-bottom: 15px;
-  }
-}
+/* Add more styles as needed */
