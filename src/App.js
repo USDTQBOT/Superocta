@@ -16,9 +16,10 @@ import AdminUsers from './pages/admin/Users';
 import AdminTransactions from './pages/admin/Transactions';
 
 // User Pages
-import UserDashboard from './pages/user/Dashboard';
+import UserDashboard from './pages/UserDashboard';
 import UserTransfer from './pages/user/Transfer';
 import UserHistory from './pages/user/History';
+// Add this route inside your <Routes> component
 
 function App() {
   return (
@@ -48,7 +49,12 @@ function App() {
             <Route index element={<UserDashboard />} />
             <Route path="transfer" element={<UserTransfer />} />
             <Route path="history" element={<UserHistory />} />
-          </Route>
+            <Route path="/user/:id" element={<UserDashboard 
+  users={users} 
+  transactions={transactions} 
+  addTransaction={addTransaction} 
+/>} />
+         </Route>
         </Routes>
       </Router>
     </AuthProvider>
