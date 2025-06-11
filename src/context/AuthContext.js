@@ -9,8 +9,8 @@ export const AuthProvider = ({ children }) => {
   const [transactions, setTransactions] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Initialize with sample data
   useEffect(() => {
+    // Initialize with sample data
     const adminUser = {
       id: uuidv4(),
       name: 'Poco Admin',
@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
       balance: 10000,
       joinDate: new Date().toISOString(),
       status: 'active',
-      avatar: `https://i.pravatar.cc/150?img=1`
+      avatar: 'https://i.pravatar.cc/150?img=1'
     };
 
     const sampleUser = {
@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
       balance: 1500,
       joinDate: new Date().toISOString(),
       status: 'active',
-      avatar: `https://i.pravatar.cc/150?img=2`
+      avatar: 'https://i.pravatar.cc/150?img=2'
     };
 
     const sampleTxns = [{
